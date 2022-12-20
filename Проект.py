@@ -275,6 +275,7 @@ try:
             try:
                 enter_ip = self.name_input.text()
                 if len(get_country_by_ip(ip2int(enter_ip))) > 0:
+                    country = get_country(ip2int(enter_ip))
                     self.output.setPlainText(country[1])
                     self.set_flag(get_flag(country[0]))
                 else:
